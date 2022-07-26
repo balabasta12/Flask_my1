@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block title %}
+    Редактирование объявления
+{% endblock %}
+
+{% block body %}
+<div class="container mt-5">
+    <h1>Редактирование объявления</h1>
+    <form method="post">
+        <input type="text" name="title" id="title" class="form-control" value="{{ article.title }}" placeholder="Введите название"><br>
+        <textarea name="text" id="text" class="form-control" placeholder="Введите описание">{{ article.text }}</textarea><br>
+        <textarea name="price" class="form-control" placeholder="Введите цену">{{ article.price }}</textarea><br>
+        <textarea name="user" id="user" class="form-control" placeholder="Введите имя">{{ article.user }}</textarea><br>
+<!--        <label for="tentacles">Number of tentacles (10-100):</label>-->
+<!--        <input type="number" id="tentacles" name="tentacles" min="10" max="100">-->
+        <input type="submit" class="btn btn_success" value="Редактирвать">
+    </form>
+</div>
+{% endblock %}
